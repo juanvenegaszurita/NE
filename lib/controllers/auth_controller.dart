@@ -5,11 +5,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:simple_gravatar/simple_gravatar.dart';
-import 'package:negocio_digital/localizations.dart';
-import 'package:negocio_digital/models/models.dart';
-import 'package:negocio_digital/ui/auth/auth.dart';
-import 'package:negocio_digital/ui/ui.dart';
-import 'package:negocio_digital/ui/components/components.dart';
+import 'package:negocio_electronico/localizations.dart';
+import 'package:negocio_electronico/models/models.dart';
+import 'package:negocio_electronico/ui/auth/auth.dart';
+import 'package:negocio_electronico/ui/ui.dart';
+import 'package:negocio_electronico/ui/components/components.dart';
 
 class AuthController extends GetxController {
   static AuthController to = Get.find();

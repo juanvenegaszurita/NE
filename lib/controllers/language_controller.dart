@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:negocio_digital/constants/globals.dart';
+import 'package:negocio_electronico/constants/globals.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:negocio_digital/localizations.dart';
+import 'package:negocio_electronico/localizations.dart';
 import 'dart:ui' as ui;
 
 class LanguageController extends GetxController {

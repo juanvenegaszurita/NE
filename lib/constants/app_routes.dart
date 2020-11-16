@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
-import 'package:negocio_digital/ui/ui.dart';
-import 'package:negocio_digital/ui/auth/auth.dart';
+import 'package:negocio_electronico/ui/boletas/detalle_boleta_ui.dart';
+import 'package:negocio_electronico/ui/boletas/emitir_boleta_ui.dart';
+import 'package:negocio_electronico/ui/ui.dart';
+import 'package:negocio_electronico/ui/auth/auth.dart';
 
 class AppRoutes {
   AppRoutes._(); //this is to prevent anyone from instantiating this object
@@ -12,5 +14,7 @@ class AppRoutes {
     GetPage(name: '/settings', page: () => SettingsUI()),
     GetPage(name: '/reset-password', page: () => ResetPasswordUI()),
     GetPage(name: '/update-profile', page: () => UpdateProfileUI()),
+    GetPage(name: '/emitir-boleta', page: () => EmitirBoletaUI()),
+    GetPage(name: '/detalle-boleta', page: () => DetalleBoletaUI()),
   ];
 }

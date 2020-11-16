@@ -3,11 +3,11 @@ import 'package:flutter/services.dart';
 
 import 'dart:core';
 import 'package:get/get.dart';
-import 'package:negocio_digital/localizations.dart';
-import 'package:negocio_digital/ui/auth/auth.dart';
-import 'package:negocio_digital/ui/components/components.dart';
-import 'package:negocio_digital/helpers/helpers.dart';
-import 'package:negocio_digital/controllers/controllers.dart';
+import 'package:negocio_electronico/localizations.dart';
+import 'package:negocio_electronico/ui/auth/auth.dart';
+import 'package:negocio_electronico/ui/components/components.dart';
+import 'package:negocio_electronico/helpers/helpers.dart';
+import 'package:negocio_electronico/controllers/controllers.dart';
 
 class SignInUI extends StatelessWidget {
   final AuthController authController = AuthController.to;
@@ -17,58 +17,64 @@ class SignInUI extends StatelessWidget {
     final labels = AppLocalizations.of(context);
 
     return Scaffold(
-      body: Form(
-        key: _formKey,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  LogoGraphicHeader(),
-                  SizedBox(height: 48.0),
-                  FormInputFieldWithIcon(
-                    controller: authController.emailController,
-                    iconPrefix: Icons.email,
-                    labelText: labels?.auth?.emailFormField,
-                    validator: Validator(labels).email,
-                    keyboardType: TextInputType.emailAddress,
-                    onChanged: (value) => null,
-                    onSaved: (value) =>
-                        authController.emailController.text = value,
+      body: Center(
+        child: Container(
+          width: 800,
+          child: Form(
+            key: _formKey,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Center(
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      LogoGraphicHeader(),
+                      SizedBox(height: 48.0),
+                      FormInputFieldWithIcon(
+                        controller: authController.emailController,
+                        iconPrefix: Icons.email,
+                        labelText: labels?.auth?.emailFormField,
+                        validator: Validator(labels).email,
+                        keyboardType: TextInputType.emailAddress,
+                        onChanged: (value) => null,
+                        onSaved: (value) =>
+                            authController.emailController.text = value,
+                      ),
+                      FormVerticalSpace(),
+                      FormInputFieldWithIcon(
+                        controller: authController.passwordController,
+                        iconPrefix: Icons.lock,
+                        labelText: labels?.auth?.passwordFormField,
+                        validator: Validator(labels).password,
+                        obscureText: true,
+                        onChanged: (value) => null,
+                        onSaved: (value) =>
+                            authController.passwordController.text = value,
+                        maxLines: 1,
+                      ),
+                      FormVerticalSpace(),
+                      PrimaryButton(
+                          labelText: labels?.auth?.signInButton,
+                          onPressed: () async {
+                            if (_formKey.currentState.validate()) {
+                              authController
+                                  .signInWithEmailAndPassword(context);
+                            }
+                          }),
+                      FormVerticalSpace(),
+                      LabelButton(
+                        labelText: labels?.auth?.resetPasswordLabelButton,
+                        onPressed: () => Get.to(ResetPasswordUI()),
+                      ),
+                      LabelButton(
+                        labelText: labels?.auth?.signUpLabelButton,
+                        onPressed: () => Get.to(SignUpUI()),
+                      ),
+                    ],
                   ),
-                  FormVerticalSpace(),
-                  FormInputFieldWithIcon(
-                    controller: authController.passwordController,
-                    iconPrefix: Icons.lock,
-                    labelText: labels?.auth?.passwordFormField,
-                    validator: Validator(labels).password,
-                    obscureText: true,
-                    onChanged: (value) => null,
-                    onSaved: (value) =>
-                        authController.passwordController.text = value,
-                    maxLines: 1,
-                  ),
-                  FormVerticalSpace(),
-                  PrimaryButton(
-                      labelText: labels?.auth?.signInButton,
-                      onPressed: () async {
-                        if (_formKey.currentState.validate()) {
-                          authController.signInWithEmailAndPassword(context);
-                        }
-                      }),
-                  FormVerticalSpace(),
-                  LabelButton(
-                    labelText: labels?.auth?.resetPasswordLabelButton,
-                    onPressed: () => Get.to(ResetPasswordUI()),
-                  ),
-                  LabelButton(
-                    labelText: labels?.auth?.signUpLabelButton,
-                    onPressed: () => Get.to(SignUpUI()),
-                  ),
-                ],
+                ),
               ),
             ),
           ),

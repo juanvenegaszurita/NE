@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:negocio_digital/models/models.dart';
-import 'package:negocio_digital/ui/components/components.dart';
+import 'package:negocio_electronico/models/models.dart';
+import 'package:negocio_electronico/ui/components/components.dart';
 
 class Avatar extends StatelessWidget {
   Avatar(

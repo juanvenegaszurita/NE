@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class MenuOptionsModel {
   String key;
   String value;
+  Widget widget;
   IconData icon;
 
-  MenuOptionsModel({this.key, this.value, this.icon});
+  MenuOptionsModel({this.key, this.value, this.widget, this.icon});
 }

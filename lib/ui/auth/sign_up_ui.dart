@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:negocio_digital/localizations.dart';
-import 'package:negocio_digital/ui/components/components.dart';
-import 'package:negocio_digital/helpers/helpers.dart';
-import 'package:negocio_digital/controllers/controllers.dart';
-import 'package:negocio_digital/ui/auth/auth.dart';
+import 'package:negocio_electronico/localizations.dart';
+import 'package:negocio_electronico/ui/components/components.dart';
+import 'package:negocio_electronico/helpers/helpers.dart';
+import 'package:negocio_electronico/controllers/controllers.dart';
+import 'package:negocio_electronico/ui/auth/auth.dart';
 
 class SignUpUI extends StatelessWidget {
   final AuthController authController = AuthController.to;

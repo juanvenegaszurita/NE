@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:negocio_digital/ui/auth/auth.dart';
+import 'package:negocio_electronico/ui/auth/auth.dart';
 import 'package:get/get.dart';
-import 'package:negocio_digital/ui/components/segmented_selector.dart';
-import 'package:negocio_digital/localizations.dart';
-import 'package:negocio_digital/controllers/controllers.dart';
-import 'package:negocio_digital/ui/components/components.dart';
-import 'package:negocio_digital/models/models.dart';
-import 'package:negocio_digital/constants/constants.dart';
+import 'package:negocio_electronico/ui/components/segmented_selector.dart';
+import 'package:negocio_electronico/localizations.dart';
+import 'package:negocio_electronico/controllers/controllers.dart';
+import 'package:negocio_electronico/ui/components/components.dart';
+import 'package:negocio_electronico/models/models.dart';
+import 'package:negocio_electronico/constants/constants.dart';
 
 class SettingsUI extends StatelessWidget {
   //final LanguageController languageController = LanguageController.to;
@@ -20,7 +20,12 @@ class SettingsUI extends StatelessWidget {
       appBar: AppBar(
         title: Text(labels.settings.title),
       ),
-      body: _buildLayoutSection(context),
+      body: Center(
+        child: Container(
+          width: 800,
+          child: _buildLayoutSection(context),
+        ),
+      ),
     );
   }
 

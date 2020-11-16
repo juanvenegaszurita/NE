@@ -4,9 +4,9 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'localizations.dart';
-import 'package:negocio_digital/controllers/controllers.dart';
-import 'package:negocio_digital/constants/constants.dart';
-import 'package:negocio_digital/ui/components/components.dart';
+import 'package:negocio_electronico/controllers/controllers.dart';
+import 'package:negocio_electronico/constants/constants.dart';
+import 'package:negocio_electronico/ui/components/components.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 

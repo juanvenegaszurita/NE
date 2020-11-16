@@ -1,4 +1,4 @@
-import 'package:negocio_digital/localizations.dart';
+import 'package:negocio_electronico/localizations.dart';
 
 // matching various patterns for kinds of data
 
