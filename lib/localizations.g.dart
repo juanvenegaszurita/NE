@@ -78,6 +78,15 @@ class AppLocalizations {
       menu: AppLocalizations_Labels_Menu(
         home: "Home",
         settings: "Settings",
+        emitirBoleta: "Create Ticket",
+        servicios: "Service",
+      ),
+      services: AppLocalizations_Labels_Services(
+        title: "Services",
+        btn_save: "Save",
+        edit_title: "Title",
+        edit_description: "Descriptions",
+        edit_position: "Positions",
       ),
     ),
     Locale.fromSubtags(languageCode: "es"): AppLocalizations_Labels(
@@ -154,9 +163,18 @@ class AppLocalizations {
         home: "Hogar",
         settings: "Ajustes",
         emitirBoleta: "Emitir Boleta",
+        servicios: "Servicios",
       ),
-      emitirBoleta:
-          AppLocalizations_Labels_Emitir_Boleta(title: "Emitir Boleta"),
+      emitirBoleta: AppLocalizations_Labels_Emitir_Boleta(
+        title: "Emitir Boleta",
+      ),
+      services: AppLocalizations_Labels_Services(
+        title: "Servicios",
+        btn_save: "Guardar",
+        edit_title: "Título",
+        edit_description: "Descioción",
+        edit_position: "Posición",
+      ),
     ),
   };
 
@@ -295,17 +313,37 @@ class AppLocalizations_Labels_Menu {
     this.home,
     this.settings,
     this.emitirBoleta,
+    this.servicios,
   });
 
   final String home;
   final String settings;
   final String emitirBoleta;
+  final String servicios;
 }
 
 class AppLocalizations_Labels_Emitir_Boleta {
   const AppLocalizations_Labels_Emitir_Boleta({this.title});
 
   final String title;
+}
+
+class AppLocalizations_Labels_Services {
+  const AppLocalizations_Labels_Services({
+    this.title,
+    this.btn_save,
+    this.edit_title,
+    this.edit_description,
+    this.edit_position,
+    this.img,
+  });
+
+  final String title;
+  final String btn_save;
+  final String edit_title;
+  final String edit_description;
+  final String edit_position;
+  final String img;
 }
 
 class AppLocalizations_Labels {
@@ -316,7 +354,8 @@ class AppLocalizations_Labels {
       this.app,
       this.validator,
       this.menu,
-      this.emitirBoleta});
+      this.emitirBoleta,
+      this.services});
 
   final AppLocalizations_Labels_Auth auth;
   final AppLocalizations_Labels_Settings settings;
@@ -325,4 +364,5 @@ class AppLocalizations_Labels {
   final AppLocalizations_Labels_Validator validator;
   final AppLocalizations_Labels_Menu menu;
   final AppLocalizations_Labels_Emitir_Boleta emitirBoleta;
+  final AppLocalizations_Labels_Services services;
 }

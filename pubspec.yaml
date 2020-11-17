@@ -27,6 +27,7 @@ dependencies:
   simple_gravatar:
   
   intl: ^0.16.1
+  image_picker:
 
 dev_dependencies:
   flutter_test:

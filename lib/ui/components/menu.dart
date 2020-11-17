@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:negocio_electronico/localizations.dart';
 import 'package:negocio_electronico/models/models.dart';
+import 'package:negocio_electronico/ui/adminPage/services_ui.dart';
 import 'package:negocio_electronico/ui/boletas/boleta.dart';
 import 'package:negocio_electronico/ui/ui.dart';
 
@@ -32,6 +33,11 @@ class Menu extends StatelessWidget {
       MenuOptionsModel(
         key: labels?.menu?.emitirBoleta,
         widget: EmitirBoletaUI(),
+        icon: Icons.calculate,
+      ),
+      MenuOptionsModel(
+        key: labels?.menu?.servicios,
+        widget: ServiceUi(),
         icon: Icons.calculate,
       ),
     ];
